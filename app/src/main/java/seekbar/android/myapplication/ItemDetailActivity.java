@@ -23,16 +23,15 @@ public class ItemDetailActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.title);
         textView.setText("ItemDetailActivity");
         mButton = (Button) findViewById(R.id.newActiivityButton);
-//        mButton.setText("Start Over");
-//        mButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = getBaseContext().getPackageManager()
-//                        .getLaunchIntentForPackage(getBaseContext().getPackageName());
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);
-//            }
-//        });
+        mButton.setText("Start Over");
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ItemDetailActivity.this, UserProfileActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
         mButton.setVisibility(View.INVISIBLE);
     }
 
