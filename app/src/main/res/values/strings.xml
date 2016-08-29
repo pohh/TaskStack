@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TaskStack</string>
+    <string name="button_new_activity">New Activity</string>
+</resources>
